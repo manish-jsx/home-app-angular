@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[plugins]]
+  package = "@netlify/plugin-functions-core"
+
+[[functions]]
+  directory = "netlify/functions"
+
+[dev]
+  framework = "#custom"
+  command = "npm run start"
+  targetPort = 3000
+  port = 8888
+
+[build.environment]
+  NODE_VERSION = "18.19.0"
