@@ -13,11 +13,8 @@
 [[functions]]
   directory = "netlify/functions"
 
-[dev]
-  framework = "#custom"
-  command = "npm run start"
-  targetPort = 3000
-  port = 8888
+
 
 [build.environment]
   NODE_VERSION = "18.19.0"
+
